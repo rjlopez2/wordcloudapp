@@ -1,4 +1,4 @@
-# Streamlit app to analyze words in a survey
+# Streamlit app to analyze words
 
 This is a **Streamlit-based application** that generates an interactive **word cloud** from a column in an uploaded Excel file. It uses **Plotly** for interactivity and color-codes words by frequency (like a heatmap from blue to red). Tooltips on hover display each word’s frequency and who mentioned it.
 
@@ -55,33 +55,33 @@ apptainer build --fakeroot wordcloud.sif app.def
 
 ## How to Run the App
 
-### 2. Run the container interactively
+### 1. Run the container interactively
 ```bash
 apptainer run --bind ./app:/app wordcloud.sif
 ```
 
 This mounts the app/ and data/ folders into the container.
 
-# How to Use the App
+## How to Use the App
 
 1. Upload your Excel file (.xlsx)
 
 2. Select the column you want to analyze (e.g., "Software")
 
-3. The app automatically uses the Name column to associate entries with contributors
+3. The app automatically uses the `'Name'` column to associate entries with contributors
 
 4. Optionally exclude words (separate by ;, case-insensitive)
 
 5. Click “Generate Word Cloud”
 
-6. Interact with the colorful Plotly word cloud!
+6. Interact with the colorful Plotly word cloud.
 
 7. Hover over a word to see:
-   - Frequency of use
-   - Who used the word
+   - Frequency of use.
+   - Who used the word.
 
 
-# Notes
+## Notes
 
 - Your Excel file must include a column named Name to track user mentions.
 
@@ -89,7 +89,7 @@ This mounts the app/ and data/ folders into the container.
 
 - Words are color-coded using a Jet-style colormap (low = blue, high = red).
 
-# Contributing
+## Contributing
 
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
@@ -97,6 +97,6 @@ This mounts the app/ and data/ folders into the container.
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create a new Pull Request
 
-# License
+## License
 
 Code is licensed under MIT (see LICENSE.txt)
