@@ -11,3 +11,4 @@ __pycache__/
 *.tar.gz
 *.egg
 data/*.xlsx
+*.sif
